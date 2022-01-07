@@ -256,3 +256,4 @@ $('.cell').on('click', function() {
     makeClickable();
 })
 
+//как сделать пуши подумай с файлов

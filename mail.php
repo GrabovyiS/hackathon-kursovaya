@@ -13,3 +13,5 @@ mail(
 header("Location: http://www.example.com/another-page.php");
 die();
 ?>
+
+<!-- не понятно пока нужен будет этот файл вообще или нет но пусть лежит пока -->
