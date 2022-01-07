@@ -1,5 +1,4 @@
-let map = 
-[[9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9],
+const map = [[9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9],
 [9,1,1,1,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9],
 [9,1,1,1,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9,9,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9],
 [9,1,1,1,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9,9,9,1,1,1,1,1,1,1,9,9,9,1,1,9,9,9,1,1,1,1,1,1,1,9,9,9,1,1,9,9,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9],
@@ -98,17 +97,113 @@ let map =
 [9,4,4,1,9,4,9,9,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,9,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9],
 [9,1,1,1,9,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,9,9,9,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9],
 [9,1,1,1,9,4,4,4,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9,9,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,9],
-[9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9]];
+[9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9]]
 
-let myCoords;
 
-for (let i = 0; i < map.length; i++) {
-    for (let j = 0; j < map.length; j++) {
-        if (map[i][j] === 3) {
-            myCoords = [i,j];
+const html_map = document.getElementById('map');
+const html_vector = document.getElementById('vector');
+const html_radius = document.getElementById('radius');
+const santa = document.createElement("div");
+santa.className = "santa";
+let clickableArea = [];
+
+const RADIUS = {"9": -1, "0": 0, "1": 1, "2": 2, "4": 2, "3": 2}
+
+
+
+santaX = 57;
+santaY = 49;
+
+let vector = [0, 0];
+let radius;
+
+function createBlock(item, y, x) {
+    let div = document.createElement("button");
+    div.setAttribute('data-x', x);
+    div.setAttribute('data-y', y);
+    // div.innerHTML = item;
+    switch (item) {
+        case 0:
+            div.className = "cell ice";
             break;
+        case 1:
+            div.className = "cell snow";
+            break;
+        case 2:
+            div.className = "cell road";
+            break;
+        case 3:
+            div.className = "cell santa";
+            div.appendChild(santa);
+            break;
+        case 4:
+            div.className = "cell gift";
+            break;
+        case 9:
+            div.className = "cell death";
+    }
+    return div;
+}
+
+for (let i in map) {
+    let row = document.createElement("div");
+    row.className = "row";
+    for (let j in map) {
+        let div = createBlock(map[i][j], i, j);
+        row.appendChild(div);
+    }
+    html_map.appendChild(row);
+}
+
+
+
+
+radius = RADIUS[map[santaY][santaX]];
+$('#santa')[0].innerHTML = `${santaX}, ${santaY}`;
+
+
+html_radius.innerHTML = radius;
+html_vector.innerHTML = vector;
+
+
+makeClickable();
+
+function moveSanta(x, y) {
+    html_map.childNodes[y].childNodes[x].classList.add('santa');
+    html_map.childNodes[santaY].childNodes[santaX].classList.remove('santa');
+    santaX = x;
+    santaY = y;
+    $('#santa')[0].innerHTML = `${santaX}, ${santaY}`;
+}
+
+function makeClickable() {
+    const size = radius * 2 + 1;
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            let cell = html_map.childNodes[santaY - radius + vector[1] + i].childNodes[santaX - radius + vector[0] + j];
+            cell.classList.add('clickable');
         }
     }
 }
 
-console.log(myCoords);
+function clearClickable() {
+    $('.clickable').removeClass('clickable');
+}
+
+
+function getMovements() {
+    
+}
+
+$('button').on('click', function() {
+    let x = $(this).attr('data-x');
+    let y = $(this).attr('data-y');
+    vector[0] = x - santaX;
+    vector[1] = y - santaY;
+    html_vector.innerHTML = vector;
+    clearClickable();
+    moveSanta(x, y);
+    radius = RADIUS[map[santaY][santaX]];
+    html_radius.innerHTML = radius;
+    makeClickable();
+})
