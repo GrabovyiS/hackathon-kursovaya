@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+}
+
+#map {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(100, 20px);
+    
+}
+
+
+.cell {
+    border: 1px solid black;
+    height: 20px;
+    position: relative;
+}
+
+.cell::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.ice {
+    background-color: lightblue;
+}
+
+.gift {
+    background-color: red;
+}
+
+.snow {
+    background-color: white;
+}
+
+.road {
+    background-color: lightgreen;
+}
+
+.death {
+    background-color: black;
+}
+
+.clickable {
+    cursor: pointer;
+    position: relative;
+}
+
+.clickable::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+
+.santa {
+    background-color: purple;
+}
+
+
+.game {
+    position: relative;
+}
+
+
+
+.controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    border: 1px solid black;
+    min-width: 100px;
+    max-width: 400px;
+    min-height: 100px;
+
+}
+
+.conrols::hover {
+    display: none;
+}

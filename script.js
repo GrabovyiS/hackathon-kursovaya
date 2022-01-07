@@ -207,7 +207,7 @@ function makeClickable() {
             }
         }
     }
-    if (!$('.clickable').length) {
+    if (!$('.clickable').length || steps>=3600) {
         $('#gameover').modal();
     }
 }
@@ -232,10 +232,20 @@ function updateVectorArray(vector) {
 }
 
 
+function scoreDependants() {
+    if (points <= 10000000) {
+        $('#submit').prop('disabled', true);
+    } else {
+        $('#submit').prop('disabled', false);
+        $('#hidden-input').value = JSON.stringify(vectorArray);
+    }
+}
+
 $('.cell').on('click', function() {
     let x = $(this).attr('data-x');
     let y = $(this).attr('data-y');
     updateVectorArray(vector);
+    scoreDependants();
     vector[0] = x - santaX;
     vector[1] = y - santaY;
     html_vector.innerHTML = vector;
@@ -246,4 +256,3 @@ $('.cell').on('click', function() {
     makeClickable();
 })
 
-$('#hidden-input').value = JSON.stringify(vectorArray);
