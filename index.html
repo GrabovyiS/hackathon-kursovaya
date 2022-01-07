@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kek</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="game">
+        <div id="map"></div>
+        <div class="controls">
+            <div class="vector-wrapper">Вектор скорости <span id="vector"></span></div>
+            <div class="radius-wrapper">Радиус <span id="radius"></span></div>
+            <div class="santa-wrapper">Деанон санты <span id="santa"></span></div>
+            <div class="gifts-wrapper">Подарки <span id="gifts"></span></div>
+            <div class="steps-wrapper">Шаги <span id="steps"></span></div>
+            <div class="points-wrapper">Очки <span id="points"></span></div>
+        </div>
+    </div>
+        
+    <form method="POST" action="mail.php">
+        <input name="arr" type="hidden" id="hidden-input">
+        <button type="submit">Закончить игру</button>
+    </form>
     <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="kek.js"></script>
 </body>
 </html>
