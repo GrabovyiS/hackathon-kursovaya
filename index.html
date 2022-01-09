@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kek</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="game">
-        <div id="map"></div>
-        <div class="controls">
-            <div class="vector-wrapper">Вектор скорости <span id="vector"></span></div>
-            <div class="radius-wrapper">Радиус <span id="radius"></span></div>
-            <div class="santa-wrapper">Деанон санты <span id="santa"></span></div>
-            <div class="gifts-wrapper">Подарки <span id="gifts"></span></div>
-            <div class="steps-wrapper">Шаги <span id="steps"></span></div>
-            <div class="points-wrapper">Очки <span id="points"></span></div>
+      <div id="map"></div>
+      <div class="controls" id="controls">
+        <div class="vector-wrapper">
+          Вектор скорости <span id="vector"></span>
         </div>
+        <div class="radius-wrapper">Радиус <span id="radius"></span></div>
+        <div class="santa-wrapper">Деанон санты <span id="santa"></span>
+        <button id="santa-deanon">🎅</button></div>
+        <div class="gifts-wrapper">Подарки <span id="gifts"></span></div>
+        <div class="steps-wrapper">Шаги <span id="steps"></span></div>
+        <div class="points-wrapper">Очки <span id="points"></span></div>
+        <div class="json-wrapper"><button id="json">JSON</button></div>
+        <div class="input-wrapper"><input type="text" id="json-input"><button id="json-btn">🗿</button></div>
+        <div class="input-wrapper">
+          <input type="text" id="teleport-input">
+          <button id="teleport-btn">🌀</button>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" placeholder="x" id="improve-x">
+          <input type="text" placeholder="y" id="improve-y">
+          <button id="improve-btn">Улучшить</button>
+        </div>
+        <div class="control-buttons">
+            <button id="undo">⏮</button>
+            <button id="redo">⏭️</button>
+        </div>
+      </div>
     </div>
     <div id="gameover" class="modal">
-        <p>Thanks for clicking. That felt good.</p>
-        <a href="#" rel="modal:close">Close</a>
+      <p>Спс за игру.</p>
+      <button id="copy-json">Сохранить JSON</button>
+      <a href="#1" rel="modal:close">Close</a>
     </div>
-    <form method="POST" action="mail.php">
-        <input name="arr" type="hidden" id="hidden-input">
-        <button id="game-over" type="submit">Закончить игру</button>
-    </form>
     <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
     <script src="kek.js"></script>
+    <script src="drag.js"></script>
 </body>
 </html>
